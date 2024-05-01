@@ -7,6 +7,11 @@ de (MS Windows) o cp de (Unix/Linux) pero para ver una forma posible de crear un
 herramienta de trabajo, incluso si nadie quiere usarla.
 
 Observa el código en el editor.
+
+#PRUEBA CON LOS SIGUIENTES ARCHIVOS
+
+Archivo fuente -> file.bin
+Archivo destino -> file_copy.bin
 '''
 from os import strerror
 
