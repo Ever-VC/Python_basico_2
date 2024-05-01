@@ -15,4 +15,10 @@ except IOError as e:
 El contenido del archivo recién creado es el mismo.
 
 Nota: puedes usar el mismo método para escribir en el stream stderr, pero no intentes abrirlo, ya que siempre está abierto implícitamente.
+
+Por ejemplo, si deseas enviar un mensaje de tipo cadena a stderr para distinguirlo de la salida normal del programa, puede verse así:
+
+
+import sys
+sys.stderr.write("Mensaje de Error")
 '''
