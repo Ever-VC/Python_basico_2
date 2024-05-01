@@ -28,3 +28,26 @@ import os
 
 os.mkdir("./modulo os/my_first_directory")
 print(os.listdir())
+
+'''
+La función mkdir crea un directorio en la ruta especificada. Ten en cuenta que ejecutar el programa dos 
+veces generará un FileExistsError.
+
+Esto significa que no podemos crear un directorio si ya existe. Además del argumento de la ruta, la función 
+mkdir puede tomar opcionalmente el argumento mode, que especifica los permisos del directorio. Sin embargo, en 
+algunos sistemas, el argumento mode se ignora.
+
+Para cambiar los permisos del directorio, recomendamos la función chmod, que funciona de manera similar 
+al comando chmod en sistemas Unix. Puedes encontrar más información al respecto en la documentación.
+
+En el ejemplo anterior, se usa otra función proporcionada por el módulo os llamada listdir. La función 
+listdir devuelve una lista que contiene los nombres de los archivos y directorios que se encuentran en la 
+ruta pasada como argumento.
+
+Si no se le pasa ningún argumento, se utilizará el directorio de trabajo actual (como en el ejemplo anterior). 
+Es importante que el resultado de la función listdir omita las entradas '.' y '..', que se muestran, por 
+ejemplo, cuando se usa el comando ls -a en sistemas Unix.
+
+NOTA: Tanto en Windows como en Unix, hay un comando llamado mkdir, que requiere una ruta de directorio. 
+El equivalente del código anterior que crea el directorio my_first_directory es el comando mkdir my_first_directory.
+'''
