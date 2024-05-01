@@ -68,6 +68,20 @@ El protocolo de iteración definido para el objeto del archivo es muy simple: su
 
 Además, puedes esperar que el objeto invoque automáticamente a close() cuando cualquiera de las lecturas del archivo lleguen al final del archivo.
 
+Mira el editor y ve cuan simple y claro se ha vuelto el código.
 
 '''
+print('-'*40)
+
+try:
+	ccnt = lcnt = 0
+	for line in open('./Archivos/Procesando_archivos/text.txt', 'rt'):
+		lcnt += 1
+		for ch in line:
+			print(ch, end='')
+			ccnt += 1
+	print("\n\nCaracteres en el archivo:", ccnt)
+	print("Líneas en el archivo:     ", lcnt)
+except IOError as e:
+	print("Se produjo un error de E/S: ", strerror(e.errno))
     
