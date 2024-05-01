@@ -27,4 +27,47 @@ Nota: cuando no hay nada que leer del archivo, el método devuelve una lista vac
 
 Puedes esperar que al aumentar el tamaño del búfer mejore el rendimiento de entrada, pero no hay una regla de 
 oro para ello: intenta encontrar los valores óptimos por ti mismo.
+
+Observa el código en el editor. Lo hemos modificado para mostrarte como usar readlines().
 '''
+print('-'*40)
+try:
+    ccnt = lcnt = 0
+    s = open('./Archivos/Procesando_archivos/text.txt', 'rt')
+    lines = s.readlines(20)
+    while len(lines) != 0:
+        for line in lines:
+            lcnt += 1
+            for ch in line:
+                print(ch, end='')
+                ccnt += 1
+        lines = s.readlines(10)
+    s.close()
+    print("\n\nCaracteres en el archivo:", ccnt)
+    print("Líneas en archivo:     ", lcnt)
+except IOError as e:
+    print("Se produjo un error de E/S:", strerror(e.errno))
+    
+'''
+Hemos decidido usar un búfer de 15 bytes de longitud. No pienses que es una recomendación.
+
+Hemos utilizado ese valor para evitar la situación en la que la primera invocación de readlines() consuma todo el archivo.
+
+Queremos que el método se vea obligado a trabajar más duro y que demuestre sus capacidades.
+
+Existen dos bucles anidados en el código: el exterior emplea el resultado de readlines() para iterar a través 
+de él, mientras que el interno imprime las líneas carácter por carácter.
+
+El último ejemplo que queremos presentar muestra un rasgo muy interesante del objeto devuelto por la función open() en modo de texto.
+
+Creemos que puede sorprenderte: el objeto es una instancia de la clase iterable.
+
+¿Extraño? De ninguna manera. ¿Usable? Si, por supuesto.
+
+El protocolo de iteración definido para el objeto del archivo es muy simple: su método __next__ solo devuelve la siguiente línea leída del archivo.
+
+Además, puedes esperar que el objeto invoque automáticamente a close() cuando cualquiera de las lecturas del archivo lleguen al final del archivo.
+
+
+'''
+    
