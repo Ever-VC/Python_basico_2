@@ -26,7 +26,7 @@ Si pruebas tu código aquí, generará el directorio recién creado ['my_first_d
 
 import os
 
-os.mkdir("./modulo os/my_first_directory")
+os.mkdir("./Modulo os/my_first_directory")
 print(os.listdir())
 
 '''
