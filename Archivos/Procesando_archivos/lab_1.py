@@ -12,7 +12,7 @@ Lea el archivo (si es posible) y cuente todas las letras latinas (las letras may
 Imprima un histograma simple en orden alfabético (solo se deben presentar recuentos distintos de cero).
 Crea un archivo de prueba para tu código y verifica si tu histograma contiene resultados válidos.
 
-Suponiendo que el archivo de prueba llamado `lab_1_prueba.txt` contiene solo una línea con:
+Suponiendo que el archivo de prueba llamado `samplefile_1.txt` contiene solo una línea con:
 
 aBc
 
