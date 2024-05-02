@@ -16,3 +16,10 @@ print(d)
 
 d = d.replace(year=1992, month=1, day=16)
 print(d)
+
+'''
+Los parámetros year, month y day son opcionales. Puedes pasar solo un parámetro 
+al método replace, por ejemplo, año, o los tres como en el ejemplo.
+
+El método replace devuelve un objeto date modificado, por lo que debes recordar asignarlo a alguna variable
+'''
